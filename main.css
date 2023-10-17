@@ -1,0 +1,11 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 15px;
+}
+
+.customerCard{
+    border: 2px solid blue;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
