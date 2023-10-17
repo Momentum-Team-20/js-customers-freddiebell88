@@ -32,13 +32,13 @@ function buildCustomers(customerArray) {
         box.appendChild(custEmail)
         //create div for address and add to box
         let custAddress = document.createElement('div')
-        custAddress.innerText = `${customer.location.street.number} ${customer.location.street.name} \n ${customer.location.city}, ${customer.location.state} ${customer.location.postcode}`
+        custAddress.innerText = `${customer.location.street.number} ${customer.location.street.name} \n ${customer.location.city}, ${nameToAbbr(customer.location.state)} ${customer.location.postcode}`
         box.appendChild(custAddress)
         let birthdate = document.createElement('div')
-        birthdate.innerText = `DOB: ${customer.dob.date}`
+        birthdate.innerText = `DOB: ${moment(customer.dob.date).format("ll")}`
         box.appendChild(birthdate)
         let customerSince = document.createElement('div')
-        customerSince.innerText = `Customer since: ${customer.registered.date}`
+        customerSince.innerText = `Customer since: ${moment(customer.registered.date).format('ll')}`
         box.appendChild(customerSince)
     }
 }
